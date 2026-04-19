@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test</title>
+</head>
+<body>
+    <h1>Testing Product System</h1>
+    
+    <script src="products.js"></script>
+    <script>
+        console.log('Products loaded:', products);
+        console.log('Number of products:', products.length);
+        if (products && products.length > 0) {
+            document.write('<h2>✓ Products successfully loaded!</h2>');
+            document.write('<ul>');
+            products.forEach(p => {
+                document.write('<li>' + p.name + ' (ID: ' + p.id + ', Code: ' + p.code + ')</li>');
+            });
+            document.write('</ul>');
+        } else {
+            document.write('<h2>✗ No products found!</h2>');
+        }
+    </script>
+</body>
+</html>
